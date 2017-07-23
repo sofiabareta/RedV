@@ -1,0 +1,218 @@
+@font: "Roboto",
+"Arial",
+sans-serif;
+.texto-sombreado(@top, @left, @blur @cor) {
+    text-shadow: @top @left @blur @cor;
+}
+
+@regular: 400;
+@bold: 700;
+@black: 900;
+@color-primary: #010101;
+@color-secundary: #e2e2e2;
+@color-three: #999999;
+@color-four: #666666;
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    color: #333333;
+    font-family: @font;
+    background: white;
+}
+
+section {
+    position: relative;
+}
+
+.container{
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: @bold;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    margin-left: 5vw;
+    padding-right: 5vw;
+        padding-top: 5px;
+    padding-bottom: 5px;
+
+    &__logo {
+        position: absolute;
+        left: 0;
+    }
+}
+
+.menu {
+    position: absolute; // right: 0;
+    right: -100%;
+    top: 0;
+    height: 100vh;
+    background: #fff;
+    width: 50vw;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start; 
+    // background: linear-gradient(90deg, #cac5c5 10vw, #00FFFF 90vw);
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    z-index: 2;
+    &__icon {
+        align-self: flex-start;
+        max-width: 10vw;
+    }
+    &__list {
+        margin-left: 10vw;
+    }
+    &__item {
+        padding-bottom: 20px;
+    }
+    &__link {
+        text-transform: uppercase;
+        font-family: @font;
+        font-weight: @bold;
+        color: @color-primary;
+    }
+}
+
+.cart {
+    &__icon {
+        max-width: 35px;
+        margin-right: 5vw;
+    }
+}
+
+.banner {
+    &__image {
+        max-width: 100%;
+    }
+}
+
+.main-menu {
+    display: flex;
+    justify-content: space-between;
+        padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom: 1px solid @color-secundary;
+    margin-bottom: 20px;
+    h2 {
+        font-size: 18px;
+        color: @color-primary;
+        font-weight: @bold;
+    }
+    &__link{
+        text-transform: uppercase;
+        font-family: @font;
+        font-weight: @bold;
+        color: @color-primary;
+    }
+}
+
+.filters {
+    position: absolute;
+    background: #fff;
+    // right: 0; 
+    right: -100%;
+    padding: 10px;
+    top: 0;
+    border: 1px solid @color-secundary;
+    z-index: 2;
+    &:before {
+        content: "Filtros";
+        font-weight: 600;
+        line-height: 2em;
+        border-bottom: 1px solid;
+        display: block;
+        margin-bottom: 10px;
+    }
+    &__item {
+        font-size: 16px;
+        color: #999999;
+        margin-bottom: 15px;
+    }
+    &__button {
+        border: none;
+        background-color: #313131;
+        color: #fff;
+        border-radius: 2px;
+        padding: 10px;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-family: @font;
+    }
+}
+
+.slideshow {
+    &:after {
+        content: '';
+        background: linear-gradient( 90deg, transparent 90%, rgba(0, 0, 0, 0.3) 100%);
+        background-size: initial;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+    .list {
+        display: flex;
+        &__item {
+            width: 45%;
+            margin-right: 2%;
+            padding: 10px;
+        }
+        .item {
+            &__title {
+                font-size: 14px;
+                font-weight: @bold;
+                color: @color-primary;
+                margin-bottom: 15px;
+            }
+            &__hightop,
+            &__parcels {
+                font-size: 14px;
+                font-weight: @regular;
+                color: @color-three;
+                margin-bottom: 5px;
+            }
+            &__price {
+                font-size: 16px;
+                font-weight: @bold;
+                color: @color-four;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+.bt__buy {
+    background-color: #ff5c2b;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 2vh 6vw;
+    border-radius: 5px;
+    font-weight: @bold;
+    font-size: 13px;
+}
+
+.show{
+    right: 0;
+    transition: all .3s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+.footer {
+    &__image {
+        max-width: 100%;
+    }
+}

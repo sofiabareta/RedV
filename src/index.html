@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirror Fashion</title>
+    <!-- build:css css/index.min.css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <!-- endbuild -->
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="slick/fonts/slick.woff" />
+    <link rel="stylesheet" type="text/css" href="slick/fonts/slick.ttf" /> -->
+
+</head>
+
+<body>
+
+    <header class="container header">
+        <h1 class="header__logo">
+            <img src="img/nike-logo.png" alt="Nike">
+        </h1>
+
+        <nav class="menu">
+            <img src="img/menu.png" alt="" class="menu__icon" onclick=toggleMenu(event)>
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">Masculino</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">Feminino</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">Menino</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">Menina</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="#" class="cart">
+            <img src="img/cart.png" alt="Ícone do carrinho de compras" class="cart__icon">
+        </a>
+        <a onclick=toggleMenu(event)>
+            <img src="img/menu.png" alt="" class="menu__icon">
+        </a>
+    </header>
+    <!-- fim do cabecalho -->
+
+    <section class="banner">
+        <a href="" class="banner__link">
+            <img src="img/banner.png" alt="" class="banner__image">
+        </a>
+    </section>
+
+    <section class="main-menu container">
+        <h2>Chuteiras HyperVenom:</h2>
+
+        <nav class="filters">
+            <ul class="filters__list">
+                <li class="filters__item">
+                    <input class="filters__input" type="checkbox" name="checkbox" value="hightop">
+                    <label for="canoalto">Cano alto</label>
+                </li>
+                <li class="filters__item">
+                    <input class="filters__input" type="checkbox" name="checkbox" value="lowtop">
+                    <label for="canobaixo">Cano baixo</label>
+                </li>
+                <li class="filters__item">
+                    <input class="filters__input" type="checkbox" name="checkbox" value="campo">
+                    <label for="canoalto">Futebol Campo</label>
+                </li>
+                <li class="filters__item">
+                    <input class="filters__input" type="checkbox" name="checkbox" value="society">
+                    <label for="canoalto">Futebol Society</label>
+                </li>
+                <li class="filters__item">
+                    <button class="filters__button" type="">Todos os produtos</button>
+                </li>
+            </ul>
+        </nav>
+
+        <a href="" onclick=toggleMenu(event) class="main-menu__link">Filtros</a>
+
+    </section>
+
+    <section id="best-sellers" class="slideshow container">
+        <h3>Mais Vendidos</h3>
+        <ul id="bestSellersList" class="slideshow__list list"></ul>
+
+    </section>
+
+    <section id="releases" class="slideshow container">
+        <h3>Lançamentos</h3>
+        <ul id="releasesList" class="slideshow__list list"></ul>
+    </section>
+
+
+
+    <!-- fim do principal -->
+
+    <footer class="footer">
+        <img src="img/cta-picture.jpg" alt="Imagem de jogadores" class="footer__image">
+        <p class="footer__text">Just do it.</p>
+        <a href="" class="footer__button">Todos os produtos</a>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="js/helper/slider.js"></script>
+    <!-- build:js js/index.min.js -->
+    <script src="js/ajax.js"></script>
+    <script src="js/releases.js"></script>
+    <script src="js/helper/converter.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/controller/menu.js"></script>
+    <!-- endbuild -->
+
+</body>
+
+</html>

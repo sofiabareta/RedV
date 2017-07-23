@@ -1,0 +1,49 @@
+@media (min-width: 768px) {
+  .header {
+    justify-content: flex-start;
+  }
+  .header .cart {
+    position: absolute;
+    right: 0;
+  }
+  .menu {
+    position: relative;
+    height: auto;
+    background: none;
+    right: initial;
+    width: auto;
+  }
+  .menu__icon {
+    display: none;
+  }
+  .menu__list {
+    display: flex;
+    margin-left: 50px;
+  }
+  .menu__item {
+    padding-bottom: 0;
+    margin-right: 5vw;
+  }
+  .menu__link {
+    font-size: 14px;
+  }
+  .main-menu {
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+  .main-menu__link {
+    display: none;
+  }
+  .filters {
+    position: relative;
+    height: auto;
+    right: initial;
+    border: none;
+  }
+  .filters:before {
+    content: none;
+  }
+  .filters__list {
+    display: flex;
+  }
+}
