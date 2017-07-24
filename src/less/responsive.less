@@ -1,11 +1,16 @@
 @media(min-width: 768px) {
     .header{
             justify-content: flex-start;
+            margin-right: 5vw;
             .cart{
                     position: absolute;
     right: 0;
             }
     }
+        .banner{
+            height: 450px;
+    background-position: center center;
+        }
     .menu {
         position: relative;
         height: auto;
@@ -30,12 +35,14 @@
     .main-menu{
             justify-content: flex-start;
     align-items: baseline;
+    padding-right: 0;
+    margin-right: 5vw;
         &__link{
             display: none;
         }
     }
     .filters{
-            position: relative;
+            position: initial;
     height: auto;
     right: initial;
     border: none;
@@ -45,7 +52,9 @@
     &__list{
         display: flex;
     }
-    &__item{
+    &__button{
+        position: absolute;
+        right: 0;
     }
     }
 }

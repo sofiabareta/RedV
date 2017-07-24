@@ -6,9 +6,6 @@ function addProduct(product) {
 
     bestSellers.forEach(product => distData(product, "bestSellers"));
     releases.forEach(product => distData(product, "releases"));
-
-    // slider();
-
 }
 
 function distData(product, productType) {
@@ -38,7 +35,7 @@ function buildItem(product) {
     let parcels = `ou ${product.installments.number}x ${parcelValue} sem juros`;
     productItem.insertAdjacentHTML("beforeend", "<p class='item__parcels'>" + parcels + "</p>");
 
-    productItem.insertAdjacentHTML("beforeend", "<button class='bt__buy'>Comprar</button>");
+    productItem.insertAdjacentHTML("beforeend", "<button class='bt__buy' onclick='addToCart()'>Comprar</button>");
 
     return productItem;
 }

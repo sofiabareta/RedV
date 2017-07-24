@@ -12,8 +12,7 @@ sans-serif;
 @color-secundary: #e2e2e2;
 @color-three: #999999;
 @color-four: #666666;
-html,
-body {
+html {
     overflow-x: hidden;
 }
 
@@ -27,14 +26,16 @@ section {
     position: relative;
 }
 
-.container{
+.container {
     padding-left: 5vw;
     padding-right: 5vw;
+    padding-bottom: 10vh;
 }
 
 h3 {
     font-size: 16px;
     font-weight: @bold;
+    margin-bottom: 20px;
 }
 
 .header {
@@ -44,13 +45,23 @@ h3 {
     position: relative;
     margin-left: 5vw;
     padding-right: 5vw;
-        padding-top: 5px;
+    padding-top: 5px;
     padding-bottom: 5px;
-
     &__logo {
         position: absolute;
         left: 0;
     }
+}
+
+.banner {
+    /* The image used */
+    background: #ff5c2b url("/img/banner.png");
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 20vh;
+    background-position: center 6vh;
 }
 
 .menu {
@@ -63,8 +74,7 @@ h3 {
     padding: 10px;
     box-sizing: border-box;
     display: flex;
-    justify-content: flex-start; 
-    // background: linear-gradient(90deg, #cac5c5 10vw, #00FFFF 90vw);
+    justify-content: flex-start; // background: linear-gradient(90deg, #cac5c5 10vw, #00FFFF 90vw);
     transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
     z-index: 2;
     &__icon {
@@ -86,6 +96,21 @@ h3 {
 }
 
 .cart {
+    &:after {
+        content: attr(data-qtty);
+        width: 15px;
+        height: 15px;
+        background-color: rgba(255, 255, 255, 0.9);
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 100%;
+        border: 1px solid;
+        padding: 1px;
+        text-align: center;
+        font-size: 12px;
+        font-weight: bold;
+    }
     &__icon {
         max-width: 35px;
         margin-right: 5vw;
@@ -101,7 +126,7 @@ h3 {
 .main-menu {
     display: flex;
     justify-content: space-between;
-        padding-bottom: 20px;
+    padding-bottom: 20px;
     padding-top: 20px;
     border-bottom: 1px solid @color-secundary;
     margin-bottom: 20px;
@@ -110,7 +135,7 @@ h3 {
         color: @color-primary;
         font-weight: @bold;
     }
-    &__link{
+    &__link {
         text-transform: uppercase;
         font-family: @font;
         font-weight: @bold;
@@ -120,8 +145,7 @@ h3 {
 
 .filters {
     position: absolute;
-    background: #fff;
-    // right: 0; 
+    background: #fff; // right: 0; 
     right: -100%;
     padding: 10px;
     top: 0;
@@ -171,6 +195,7 @@ h3 {
             width: 45%;
             margin-right: 2%;
             padding: 10px;
+            align-self: flex-end;
         }
         .item {
             &__title {
@@ -204,15 +229,50 @@ h3 {
     border-radius: 5px;
     font-weight: @bold;
     font-size: 13px;
+    display: inline-block;
 }
 
-.show{
+.show {
     right: 0;
     transition: all .3s cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 
 .footer {
+    position: relative;
     &__image {
         max-width: 100%;
+    }
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    &__text {
+        color: #FFF;
+        text-transform: uppercase;
+        font-size: 72px;
+        font-weight: @black;
+    }
+    &__button {
+        background-color: #313131;
+        padding: 20px;
+        color: #fff;
+        font-size: 13px;
+        text-transform: uppercase;
+        margin-top: 25px;
+        display: inline-block;
+        border-radius: 5px;
+        &:hover {
+            color: #313131;
+            background-color: #fff;
+        }
+    }
+    &__copyright {
+        color: #313131;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 20px;
     }
 }

@@ -9,5 +9,4 @@ xhr.addEventListener("load", () => {
     } else console.error("Não foi possível criar uma conexão com a lista de produtos.");
 })
 xhr.send();
-
 slider();

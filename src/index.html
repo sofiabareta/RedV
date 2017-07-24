@@ -54,9 +54,9 @@
     <!-- fim do cabecalho -->
 
     <section class="banner">
-        <a href="" class="banner__link">
+        <!-- <a href="" class="banner__link">
             <img src="img/banner.png" alt="" class="banner__image">
-        </a>
+        </a> -->
     </section>
 
     <section class="main-menu container">
@@ -81,7 +81,7 @@
                     <label for="canoalto">Futebol Society</label>
                 </li>
                 <li class="filters__item">
-                    <button class="filters__button" type="">Todos os produtos</button>
+                    <button class="filters__button" type="button">Todos os produtos</button>
                 </li>
             </ul>
         </nav>
@@ -107,20 +107,25 @@
 
     <footer class="footer">
         <img src="img/cta-picture.jpg" alt="Imagem de jogadores" class="footer__image">
-        <p class="footer__text">Just do it.</p>
-        <a href="" class="footer__button">Todos os produtos</a>
+        <div class="footer__cta">
+            <p class="footer__text">Just do it.</p>
+            <a href="" class="footer__button">Todos os produtos</a>
+        </div>
+        <p class="footer__copyright">Nike Copyright 2017 - all rights reserved</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="slick/slick.min.js"></script>
     <script src="js/helper/slider.js"></script>
     <!-- build:js js/index.min.js -->
     <script src="js/ajax.js"></script>
     <script src="js/releases.js"></script>
     <script src="js/helper/converter.js"></script>
+    <script src="js/helper/addToCart.js"></script>
     <script src="js/filter.js"></script>
     <script src="js/controller/menu.js"></script>
     <!-- endbuild -->
+
 
 </body>
 

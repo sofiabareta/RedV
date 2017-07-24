@@ -1,5 +1,4 @@
-html,
-body {
+html {
   overflow-x: hidden;
 }
 body {
@@ -13,10 +12,12 @@ section {
 .container {
   padding-left: 5vw;
   padding-right: 5vw;
+  padding-bottom: 10vh;
 }
 h3 {
   font-size: 16px;
   font-weight: 700;
+  margin-bottom: 20px;
 }
 .header {
   display: flex;
@@ -31,6 +32,16 @@ h3 {
 .header__logo {
   position: absolute;
   left: 0;
+}
+.banner {
+  /* The image used */
+  background: #ff5c2b url("/img/banner.png");
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 20vh;
+  background-position: center 6vh;
 }
 .menu {
   position: absolute;
@@ -61,6 +72,21 @@ h3 {
   font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
   color: #010101;
+}
+.cart:after {
+  content: attr(data-qtty);
+  width: 15px;
+  height: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 100%;
+  border: 1px solid;
+  padding: 1px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
 }
 .cart__icon {
   max-width: 35px;
@@ -139,6 +165,7 @@ h3 {
   width: 45%;
   margin-right: 2%;
   padding: 10px;
+  align-self: flex-end;
 }
 .slideshow .list .item__title {
   font-size: 14px;
@@ -167,11 +194,48 @@ h3 {
   border-radius: 5px;
   font-weight: 700;
   font-size: 13px;
+  display: inline-block;
 }
 .show {
   right: 0;
   transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
 }
+.footer {
+  position: relative;
+}
 .footer__image {
   max-width: 100%;
+}
+.footer__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.footer__text {
+  color: #FFF;
+  text-transform: uppercase;
+  font-size: 72px;
+  font-weight: 900;
+}
+.footer__button {
+  background-color: #313131;
+  padding: 20px;
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-top: 25px;
+  display: inline-block;
+  border-radius: 5px;
+}
+.footer__button:hover {
+  color: #313131;
+  background-color: #fff;
+}
+.footer__copyright {
+  color: #313131;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
 }

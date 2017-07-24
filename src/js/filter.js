@@ -1,10 +1,13 @@
 let checkbox = document.querySelectorAll("input[type=checkbox]");
+let showAll = $('.filters__button');
 
 checkbox.forEach(input => {
     input.addEventListener('change', function() {
         filter(this.value, this.checked);
     })
 })
+
+showAll.addEventListener('click', () => filter('', false))
 
 function filter(value, checked) {
     let items = document.querySelectorAll(".list__item");
@@ -31,6 +34,9 @@ function filter(value, checked) {
                     showItem(checked, item);
                 }
                 break;
+            default:
+                item.style.display = "initial";
+                checkbox.forEach(input => input.checked = false);
         }
     });
 
